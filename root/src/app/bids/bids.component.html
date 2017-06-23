@@ -1,0 +1,18 @@
+<h1>Bid Now!</h1><button (click)="logout()" style="float:right;">Logout</button>
+
+<app-product1
+(sendBidEvent)="receiveBidP1($event)"
+[bidsArray]="product1bids"
+[latest]="allLatestBids"></app-product1>
+
+<app-product2
+(sendBidEvent)="receiveBidP2($event)"
+[bidsArray]="product2bids"
+[latest]="allLatestBids"></app-product2>
+
+<app-product3
+(sendBidEvent)="receiveBidP3($event)"
+[bidsArray]="product3bids"
+[latest]="allLatestBids"></app-product3>
+
+<button type="button" (click)="endBid()" style="position:absolute; bottom: 300px;">End Bid</button>

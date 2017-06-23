@@ -1,0 +1,38 @@
+<div class="col" style="float:left; width: 30%;">
+  <div class="product">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="#" style="height: 200px; width: auto;">
+    <form (submit)="sendBid()">
+      <input
+      required
+      type="number"
+      name="value"
+      min="0"
+      [(ngModel)]="bid.value"
+      #value="ngModel">
+      <input type="submit" value="Bid">
+      <div *ngIf="errors!==null">
+        <p>{{errors}}</p>
+      </div>
+    </form>
+  </div>
+  <p>Current Bids: </p>
+  <div class="bid" style="border: 1px solid black; width: 80%; margin-top: 25px;">
+    <div *ngFor="let bid of bidsArray">
+      <p>
+        <span>{{bid.user}}: </span>
+        <span>{{bid.value}}</span>
+      </p>
+    </div>
+  </div>
+  <br>
+  <div>
+    <form (change)="search()">
+      <input type="number" name="search" placeholder="Search" [(ngModel)]="searchVal">
+    </form>
+    <ul>
+      <li *ngFor="let result of searchList">
+        {{result.user}}: {{result.value}}
+      </li>
+    </ul>
+  </div>
+</div>

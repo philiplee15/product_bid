@@ -1,0 +1,21 @@
+<div>
+  <h1>User ended the Bid.</h1>
+  <button style="float:right" type="button" (click)="logout()">Logout</button>
+  <p>Highest Bidder per Product:</p>
+</div>
+<div class="" style="display:block;">
+  <img src="https://angular.io/assets/images/logos/angular/angular.png" alt="#" style="float: left; height: 200px; width: 200px; text-align: center;">
+  <span> {{results.p1.user}} <br> {{results.p1.value}} </span>
+</div>
+
+<div class="" style="display:block;">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="#" style="float: left; height: 200px; width: 200px; text-align: center;">
+  <span> {{results.p2.user}} <br> {{results.p2.value}} </span>
+</div>
+
+<div class="" style="display:block;">
+  <img style="display: inline-block" src="https://vuejs.org/images/logo.png" alt="#" style="float: left; height: 200px; width: 200px; text-align: center;">
+  <span> {{results.p3.user}} <br> {{results.p3.value}} </span>
+</div>
+
+<button (click)="startBid()" style="position:absolute; bottom: 300px;">Start Bid</button>
